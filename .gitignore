@@ -1,0 +1,29 @@
+# Project specific
+.DS_Store
+Thumbs.db
+
+# Design files (keep versioned but ignore working files)
+design/working/
+*.sketch~
+*.psd~
+
+# Development
+node_modules/
+.env
+*.log
+
+# WordPress (if added later)
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+~*
