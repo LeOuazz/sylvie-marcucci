@@ -3,14 +3,14 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Phone, Mail, ShoppingBag, MessageCircle, X, ChevronUp } from 'lucide-react'
+import { Phone, Mail, ShoppingBag, MessageCircle, X, ChevronUp, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 interface CTAButton {
   id: string
   title: string
   href: string
-  icon: any
+  icon: LucideIcon
   variant: 'default' | 'outline' | 'secondary'
   color?: string
   priority: number
@@ -67,14 +67,12 @@ export default function MobileCTA({
 }: MobileCTAProps) {
   const [isVisible, setIsVisible] = useState(!showOnScroll)
   const [isExpanded, setIsExpanded] = useState(false)
-  const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
     if (!showOnScroll) return
 
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      setScrollY(currentScrollY)
       
       // Show CTA when scrolled down 200px
       if (currentScrollY > 200) {

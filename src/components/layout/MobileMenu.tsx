@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone, Mail, ShoppingBag, Wrench, Palette, GraduationCap, User, Home } from 'lucide-react'
+import { Menu, X, Phone, Mail, ShoppingBag, Wrench, Palette, GraduationCap, User, Home, LucideIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 const navigationItems = [
   {
@@ -85,7 +84,7 @@ export default function MobileMenu({ className }: MobileMenuProps) {
     closed: {
       x: '-100%',
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 400,
         damping: 40
       }
@@ -93,7 +92,7 @@ export default function MobileMenu({ className }: MobileMenuProps) {
     open: {
       x: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 400,
         damping: 40
       }
@@ -338,7 +337,7 @@ export default function MobileMenu({ className }: MobileMenuProps) {
                         transition={{ delay: 0.3 + index * 0.1 }}
                       >
                         <Button
-                          variant={cta.variant as any}
+                          variant={cta.variant as 'default' | 'outline' | 'secondary'}
                           size="sm"
                           className={`w-full justify-start gap-3 h-12 rounded-xl font-medium transition-all duration-200 active:scale-95 ${
                             cta.color || (cta.variant === 'default' ? 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white' : '')
