@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Phone, Mail, ShoppingBag, Wrench, Palette, GraduationCap, User, Home, LucideIcon } from 'lucide-react'
+import { Menu, X, Phone, Mail, ShoppingBag, Wrench, Palette, GraduationCap, User, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 const navigationItems = [
@@ -60,16 +60,18 @@ const ctaButtons = [
   {
     title: 'Devis gratuit',
     href: '/contact',
-    variant: 'default',
+    variant: 'default' as const,
     icon: Mail,
-    priority: true
+    priority: 1,
+    color: 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white'
   },
   {
     title: 'Nous appeler',
     href: 'tel:0666809219',
-    variant: 'outline',
+    variant: 'outline' as const,
     icon: Phone,
-    priority: true
+    priority: 2,
+    color: 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white'
   }
 ]
 
