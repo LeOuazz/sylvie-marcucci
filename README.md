@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Atelier Sylvie Marcucci - Site Web Redesign
 
-## Getting Started
+🏠 **Site web premium pour atelier de maroquinerie artisanale toulousain**
 
-First, run the development server:
+## 🎯 Projet
+
+Refonte complète du site web de l'Atelier Sylvie Marcucci, artisan maroquinier à Toulouse, avec une approche **mobile-first** et une expérience utilisateur premium axée sur la conversion.
+
+## ✨ Fonctionnalités
+
+### 📱 **Mobile-First Premium**
+- **Sidebar dynamique** avec navigation complète et tarifs
+- **CTA mobiles multi-variantes** (sticky, floating, inline)
+- **Design responsive** optimisé pour tous les écrans
+- **Interactions tactiles** avec animations fluides
+- **Support safe area** pour appareils avec encoche
+
+### 🎨 **Design & UX**
+- **Approche MVP** : moins de pages, plus de clarté
+- **Prix transparents** visibles dès la première interaction
+- **Actions importantes** accessibles en 1 clic maximum
+- **Palette ambrée** reflet de l'artisanat du cuir
+- **Animations premium** avec Framer Motion
+
+### 🛠️ **Pages & Fonctionnalités**
+- **Accueil** : Hero compact avec services et témoignages
+- **Boutique** : Créations avec prix TTC affichés
+- **Réparations** : Tarifs fixes et transparents
+- **Création sur-mesure** : Devis gratuit en 24h
+- **Stages** : Inscription directe avec calendrier
+- **À propos** : Histoire et savoir-faire
+- **Contact** : Formulaire et contact direct
+
+## 🚀 Technologies
+
+- **Next.js 15** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Framer Motion** pour les animations
+- **Lucide React** pour les icônes
+- **Mobile-first responsive design**
+
+## 📋 Installation
 
 ```bash
+# Cloner le repository
+git clone https://github.com/LeOuazz/sylvie-marcucci-website-redesign.git
+
+# Installer les dépendances
+npm install
+
+# Lancer le serveur de développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de production
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Objectifs MVP
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **✅ Prix visibles** : Tous les tarifs affichés directement
+- **✅ Navigation simplifiée** : Actions importantes en 1 clic
+- **✅ Contact facilité** : Téléphone, email, WhatsApp directs
+- **✅ Mobile premium** : Expérience tactile optimisée
+- **✅ Conversion orientée** : CTA stratégiquement placés
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📱 Responsive Breakpoints
 
-## Learn More
+```css
+/* Mobile First */
+sm: 640px   /* Tablette portrait */
+md: 768px   /* Tablette paysage */
+lg: 1024px  /* Desktop */
+xl: 1280px  /* Large desktop */
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📢 Contact Atelier
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **📍 Adresse**: 38, rue Milhès, 31300 Toulouse
+- **📱 Téléphone**: 06 66 80 92 19
+- **✉️ Email**: atelier.vitrine.marcucci@gmail.com
+- **🕒 Horaires**: Sur rendez-vous - Lun-Sam 9h-18h
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👨‍💻 Designed & Developed by LeOuazz
 
-## Deploy on Vercel
+*Création d'expériences web premium pour artisans et créateurs*
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Fait avec ❤️ pour préserver et valoriser l'artisanat français*
