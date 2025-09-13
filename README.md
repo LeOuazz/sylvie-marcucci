@@ -1,44 +1,36 @@
-# Sylvie Marcucci - Refonte Site Web
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## 🎯 Objectif du Projet
-Refonte complète, moderne et performante du site sylviemarcucci.com (maroquinerie artisanale à Toulouse) pour mettre en valeur le savoir-faire, booster les ventes en ligne, améliorer la navigation, et respecter l'authenticité de la marque.
+## Getting Started
 
-## 📁 Structure du Projet
-```
-├── docs/                      # Documentation complète
-│   ├── requirements/          # Cahier des charges et exigences
-│   ├── architecture/          # Architecture du site et plan
-│   └── design-system/         # Système de design et guidelines
-├── design/                    # Assets et éléments visuels
-│   ├── wireframes/            # Wireframes desktop et mobile
-│   ├── mockups/               # Maquettes haute fidélité
-│   ├── assets/                # Images, icônes, ressources
-│   └── moodboard/             # Inspiration visuelle
-├── development/               # Spécifications techniques
-│   ├── cms-research/          # Recherche et recommandations CMS
-│   ├── seo-strategy/          # Stratégie SEO et optimisations
-│   └── technical-specs/       # Spécifications techniques détaillées
-└── project-management/        # Gestion de projet
-    ├── timeline/              # Planning et jalons
-    └── deliverables/          # Livrables attendus
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 🎨 Vision du Projet
-Site élégant, authentique et chaleureux reflétant l'univers "atelier artisanal haut de gamme" avec une expérience utilisateur optimisée pour la vente en ligne et la mise en valeur du savoir-faire artisanal.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🎯 Cible Principale
-- Clientèle B2C mode éthique/artisanat (femmes 30-60 ans)
-- Clients sur mesure recherchant la personnalisation
-- Participants aux stages et ateliers
-- Revendeurs locaux et partenaires
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 📝 Livrables Attendus
-- Plan de site optimisé
-- Wireframes (desktop + mobile)
-- Moodboard et propositions UI
-- Recommandations SEO
-- Plan technique (CMS/plugins/thèmes)
-- Roadmap projet détaillée
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
-*Projet initié le 13 septembre 2025*
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
