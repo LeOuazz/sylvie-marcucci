@@ -3,6 +3,8 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+import MobileMenu from './MobileMenu'
+import { Phone } from 'lucide-react'
 
 export default function Header() {
   return (
@@ -12,12 +14,31 @@ export default function Header() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-bold text-xl">Atelier Sylvie Marcucci</span>
+      <div className="container mx-auto flex h-14 sm:h-16 items-center justify-between px-4 sm:px-6">
+        {/* Logo - Responsive */}
+        <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
+          <span className="font-bold text-base sm:text-lg lg:text-xl text-primary">
+            Atelier Sylvie Marcucci
+          </span>
         </Link>
         
-        <nav className="flex items-center space-x-6">
+        {/* Mobile Actions */}
+        <div className="flex items-center gap-2 lg:hidden">
+          <Button 
+            variant="ghost" 
+            size="icon"
+            className="p-2"
+            asChild
+          >
+            <Link href="tel:0666809219" aria-label="Appeler">
+              <Phone className="h-4 w-4" />
+            </Link>
+          </Button>
+          <MobileMenu />
+        </div>
+        
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center space-x-6">
           <Link 
             href="/boutique" 
             className="text-sm font-medium transition-colors hover:text-primary"

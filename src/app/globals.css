@@ -119,4 +119,176 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    /* Prevent horizontal scroll on mobile */
+    overflow-x: hidden;
+  }
+  
+  /* Mobile-first viewport optimizations */
+  @media (max-width: 768px) {
+    html {
+      /* Prevent zoom on input focus for iOS */
+      -webkit-text-size-adjust: 100%;
+      /* Enable momentum scrolling on iOS */
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    body {
+      /* Ensure proper touch behavior */
+      touch-action: manipulation;
+    }
+  }
+}
+
+@layer components {
+  /* Mobile-first container utilities */
+  .container-mobile {
+    @apply w-full mx-auto px-4;
+    @apply sm:px-6;
+    @apply lg:px-8;
+    @apply max-w-sm;
+    @apply sm:max-w-2xl;
+    @apply md:max-w-4xl;
+    @apply lg:max-w-6xl;
+    @apply xl:max-w-7xl;
+  }
+  
+  /* Mobile-optimized section spacing */
+  .section-mobile {
+    @apply py-8;
+    @apply sm:py-12;
+    @apply lg:py-16;
+  }
+  
+  /* Mobile-first grid utilities */
+  .grid-mobile {
+    @apply grid gap-4;
+    @apply sm:gap-6;
+    @apply lg:gap-8;
+  }
+  
+  /* Touch-friendly buttons */
+  .btn-touch {
+    @apply min-h-[44px] min-w-[44px];
+    @apply touch-manipulation;
+    @apply active:scale-95;
+    @apply transition-transform duration-150;
+  }
+  
+  /* Mobile-optimized text sizing */
+  .text-mobile-hero {
+    @apply text-2xl font-bold;
+    @apply sm:text-3xl;
+    @apply lg:text-4xl;
+    @apply xl:text-5xl;
+  }
+  
+  .text-mobile-title {
+    @apply text-xl font-semibold;
+    @apply sm:text-2xl;
+    @apply lg:text-3xl;
+  }
+  
+  .text-mobile-body {
+    @apply text-sm;
+    @apply sm:text-base;
+    @apply leading-relaxed;
+  }
+  
+  /* Responsive image container */
+  .image-mobile {
+    @apply relative overflow-hidden rounded-lg;
+    @apply aspect-square;
+    @apply sm:aspect-[4/3];
+    @apply lg:aspect-[16/9];
+  }
+  
+  /* Mobile card layouts */
+  .card-mobile {
+    @apply bg-white rounded-lg shadow-sm border;
+    @apply p-4;
+    @apply sm:p-6;
+    @apply transition-shadow duration-200;
+    @apply hover:shadow-md;
+  }
+  
+  /* Mobile-first navigation spacing */
+  .nav-mobile {
+    @apply space-y-2;
+    @apply sm:space-y-0 sm:space-x-6 sm:flex sm:items-center;
+  }
+  
+  /* Sticky mobile elements */
+  .sticky-mobile {
+    @apply sticky top-[56px]; /* Account for mobile header height */
+    @apply sm:top-[64px]; /* Desktop header height */
+    @apply z-40;
+  }
+  
+  /* Mobile CTA styles */
+  .cta-mobile {
+    @apply fixed bottom-4 left-4 right-4;
+    @apply sm:relative sm:bottom-auto sm:left-auto sm:right-auto;
+    @apply z-50;
+  }
+  
+  /* Safe area for mobile devices with notch */
+  .safe-area-mobile {
+    @apply pb-[env(safe-area-inset-bottom)];
+    @apply pl-[env(safe-area-inset-left)];
+    @apply pr-[env(safe-area-inset-right)];
+  }
+  
+  /* Mobile-optimized forms */
+  .form-mobile {
+    @apply space-y-4;
+    @apply sm:space-y-6;
+  }
+  
+  .input-mobile {
+    @apply w-full min-h-[44px];
+    @apply px-4 py-3;
+    @apply text-base; /* Prevent zoom on iOS */
+    @apply border rounded-lg;
+    @apply focus:ring-2 focus:ring-primary/50;
+    @apply transition-all duration-200;
+  }
+  
+  /* Mobile loading states */
+  .loading-mobile {
+    @apply animate-pulse;
+  }
+  
+  /* Mobile-first animations */
+  .slide-up-mobile {
+    @apply transform translate-y-4 opacity-0;
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  .slide-up-mobile.animate {
+    @apply translate-y-0 opacity-100;
+  }
+  
+  /* Mobile viewport utilities */
+  .vh-mobile {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+  
+  /* Touch-friendly hover states (only on non-touch devices) */
+  @media (hover: hover) and (pointer: fine) {
+    .hover-desktop:hover {
+      @apply scale-105;
+    }
+  }
+  
+  /* Hide scrollbar while keeping functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }
